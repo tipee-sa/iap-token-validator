@@ -13,6 +13,10 @@ Usage of ./iap-token-validator:
         enable verbose logging
 ```
 
+## Why?
+
+Because https://github.com/imkira/gcp-iap-auth is not longer maintained, uses old libraries with known security flaws, doesn't handle update to the key set properly, doesn't allow for clock skew tolerence and seems a bit complicated for the dead simple task it has to do (in our case).
+
 ## Usage (docker)
 
 ```bash
