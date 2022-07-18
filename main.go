@@ -73,7 +73,7 @@ func validate(r *http.Request) (err error) {
 		log.Printf("received token: %s", tokenEscaper.Replace(token))
 	}
 
-	for retry := 0; retry < 1; retry++ {
+	for retry := 0; retry < 2; retry++ {
 		var ks jwk.Set
 		ks, err = jwkCache.Get(context.Background(), IapKeysURL)
 		if err != nil {
